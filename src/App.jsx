@@ -8,6 +8,7 @@ import Stack from './components/Stack.jsx'
 import Faq from './components/Faq.jsx'
 import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
+import FloatingContact from './components/FloatingContact.jsx'
 import useReveal from './components/useReveal.js'
 import { I18nProvider, useI18n } from './i18n/index.jsx'
 
@@ -29,6 +30,7 @@ function Site() {
         <Contact />
       </main>
       <Footer />
+      <FloatingContact />
     </>
   )
 }

@@ -109,6 +109,7 @@ const paths = {
   arrow: <path d="M5 12h14M13 6l6 6-6 6" {...base} />,
   check: <path d="m4 12.5 5 5L20 6.5" {...base} />,
   plus: <path d="M12 5v14M5 12h14" {...base} />,
+  close: <path d="M6 6l12 12M18 6 6 18" {...base} strokeWidth={2} />,
 }
 
 export default function Icon({ name, size = 22, className = '' }) {

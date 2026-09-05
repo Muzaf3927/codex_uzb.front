@@ -250,6 +250,7 @@ export default {
     labels: {
       telegram: 'Telegram — message us',
       channel: 'Our Telegram channel',
+      whatsapp: 'WhatsApp — message us',
       instagram: 'Instagram',
       phone: 'Phone',
       email: 'Email',

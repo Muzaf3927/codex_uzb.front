@@ -26,7 +26,53 @@
   color: var(--cyan);
   background: rgba(34, 211, 255, 0.08);
   border: 1px solid rgba(34, 211, 255, 0.2);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
+
+/* фирменные цвета сервисов */
+.contact__ico--telegram {
+  color: #29a9eb;
+  background: rgba(41, 169, 235, 0.11);
+  border-color: rgba(41, 169, 235, 0.28);
+}
+.contact__ico--whatsapp {
+  color: #25d366;
+  background: rgba(37, 211, 102, 0.11);
+  border-color: rgba(37, 211, 102, 0.28);
+}
+.contact__ico--instagram {
+  color: #fff;
+  background: linear-gradient(45deg, #f9ce34 0%, #ee2a7b 48%, #6228d7 100%);
+  border-color: rgba(238, 42, 123, 0.45);
+}
+.contact__ico--phone {
+  color: #7dd3a0;
+  background: rgba(125, 211, 160, 0.1);
+  border-color: rgba(125, 211, 160, 0.24);
+}
+.contact__ico--mail {
+  color: #ea6a5a;
+  background: rgba(234, 106, 90, 0.1);
+  border-color: rgba(234, 106, 90, 0.26);
+}
+.contact__ico--pin {
+  color: #a78bfa;
+  background: rgba(167, 139, 250, 0.1);
+  border-color: rgba(167, 139, 250, 0.26);
+}
+.contact__ico--clock {
+  color: #94a3b8;
+  background: rgba(148, 163, 184, 0.1);
+  border-color: rgba(148, 163, 184, 0.24);
+}
+
+/* при наведении на строку иконка чуть подсвечивается своим цветом */
+.contact__list a:hover .contact__ico { transform: scale(1.06); }
+.contact__list a:hover .contact__ico--telegram { box-shadow: 0 8px 22px rgba(41, 169, 235, 0.3); }
+.contact__list a:hover .contact__ico--whatsapp { box-shadow: 0 8px 22px rgba(37, 211, 102, 0.28); }
+.contact__list a:hover .contact__ico--instagram { box-shadow: 0 8px 22px rgba(238, 42, 123, 0.35); }
+.contact__list a:hover .contact__ico--phone { box-shadow: 0 8px 22px rgba(125, 211, 160, 0.24); }
+.contact__list a:hover .contact__ico--mail { box-shadow: 0 8px 22px rgba(234, 106, 90, 0.26); }
 
 .contact__form { padding: 34px; }
 .contact__form:hover { transform: none; }

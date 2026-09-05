@@ -27,7 +27,12 @@
   color: var(--muted);
   transition: all 0.22s ease;
 }
-.footer__socials a:hover { color: #fff; background: var(--grad-brand); border-color: transparent; transform: translateY(-3px); }
+.footer__socials a:hover { color: #fff; border-color: transparent; transform: translateY(-3px); }
+.footer__social--telegram:hover { background: #29a9eb; }
+.footer__social--whatsapp:hover { background: #25d366; }
+.footer__social--instagram:hover { background: linear-gradient(45deg, #f9ce34, #ee2a7b 48%, #6228d7); }
+.footer__social--mail:hover { background: #ea6a5a; }
+.footer__social--phone:hover { background: #4a9d6e; }
 
 .footer__col { display: flex; flex-direction: column; gap: 11px; }
 .footer__col h4 { font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); margin-bottom: 6px; }

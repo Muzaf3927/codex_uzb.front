@@ -101,43 +101,49 @@ export default function Contact() {
             <ul className="contact__list">
               <li>
                 <a href={contactLinks.telegram(contacts)} target="_blank" rel="noreferrer">
-                  <span className="contact__ico"><Icon name="telegram" size={19} /></span>
+                  <span className="contact__ico contact__ico--telegram"><Icon name="telegram" size={20} /></span>
                   <span><b>{l.telegram}</b>@{contacts.telegram}</span>
                 </a>
               </li>
               <li>
                 <a href={contactLinks.channel(contacts)} target="_blank" rel="noreferrer">
-                  <span className="contact__ico"><Icon name="megaphone" size={19} /></span>
+                  <span className="contact__ico contact__ico--telegram"><Icon name="megaphone" size={19} /></span>
                   <span><b>{l.channel}</b>@{contacts.telegramChannel}</span>
                 </a>
               </li>
               <li>
+                <a href={contactLinks.whatsapp(contacts)} target="_blank" rel="noreferrer">
+                  <span className="contact__ico contact__ico--whatsapp"><Icon name="whatsapp" size={20} /></span>
+                  <span><b>{l.whatsapp}</b>{contacts.phone}</span>
+                </a>
+              </li>
+              <li>
                 <a href={contactLinks.instagram(contacts)} target="_blank" rel="noreferrer">
-                  <span className="contact__ico"><Icon name="instagram" size={19} /></span>
+                  <span className="contact__ico contact__ico--instagram"><Icon name="instagram" size={19} /></span>
                   <span><b>{l.instagram}</b>@{contacts.instagram}</span>
                 </a>
               </li>
               <li>
                 <a href={contactLinks.phone(contacts)}>
-                  <span className="contact__ico"><Icon name="phone" size={19} /></span>
+                  <span className="contact__ico contact__ico--phone"><Icon name="phone" size={19} /></span>
                   <span><b>{l.phone}</b>{contacts.phone}</span>
                 </a>
               </li>
               <li>
                 <a href={contactLinks.email(contacts)}>
-                  <span className="contact__ico"><Icon name="mail" size={19} /></span>
+                  <span className="contact__ico contact__ico--mail"><Icon name="mail" size={19} /></span>
                   <span><b>{l.email}</b>{contacts.email}</span>
                 </a>
               </li>
               <li>
                 <div>
-                  <span className="contact__ico"><Icon name="pin" size={19} /></span>
+                  <span className="contact__ico contact__ico--pin"><Icon name="pin" size={19} /></span>
                   <span><b>{l.location}</b>{t.contact.location}</span>
                 </div>
               </li>
               <li>
                 <div>
-                  <span className="contact__ico"><Icon name="clock" size={19} /></span>
+                  <span className="contact__ico contact__ico--clock"><Icon name="clock" size={19} /></span>
                   <span><b>{l.workHours}</b>{t.contact.workHours}</span>
                 </div>
               </li>

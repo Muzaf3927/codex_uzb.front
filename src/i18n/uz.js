@@ -250,6 +250,7 @@ export default {
     labels: {
       telegram: 'Telegram — bizga yozing',
       channel: 'Telegram kanalimiz',
+      whatsapp: 'WhatsApp — yozing',
       instagram: 'Instagram',
       phone: 'Telefon',
       email: 'Pochta',

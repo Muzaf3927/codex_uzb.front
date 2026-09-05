@@ -13,6 +13,8 @@ export const contacts = {
   /** Телеграм-канал команды */
   telegramChannel: import.meta.env.VITE_TELEGRAM_CHANNEL || 'codex_uzb',
   instagram: import.meta.env.VITE_INSTAGRAM || 'codex_uzb',
+  /** WhatsApp — только цифры, без пробелов и плюса */
+  whatsapp: import.meta.env.VITE_WHATSAPP || '998900038902',
   phone: import.meta.env.VITE_PHONE || '+998 90 003 89 02',
   email: import.meta.env.VITE_EMAIL || 'hamroyevmuzaf@gmail.com',
 }
@@ -21,6 +23,7 @@ export const contactLinks = {
   telegram: (c) => `https://t.me/${c.telegram}`,
   channel: (c) => `https://t.me/${c.telegramChannel}`,
   instagram: (c) => `https://www.instagram.com/${c.instagram}`,
+  whatsapp: (c) => `https://wa.me/${c.whatsapp}`,
   phone: (c) => `tel:${c.phone.replace(/[^+\d]/g, '')}`,
   email: (c) => `mailto:${c.email}`,
 }

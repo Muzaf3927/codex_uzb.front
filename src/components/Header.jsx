@@ -47,13 +47,22 @@ export default function Header() {
         <div className="header__actions">
           <LangSwitcher />
           <a
-            className="header__social"
+            className="header__social header__social--tg"
             href={contactLinks.telegram(contacts)}
             target="_blank"
             rel="noreferrer"
             aria-label="Telegram"
           >
             <Icon name="telegram" size={20} />
+          </a>
+          <a
+            className="header__social header__social--wa"
+            href={contactLinks.whatsapp(contacts)}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="WhatsApp"
+          >
+            <Icon name="whatsapp" size={19} />
           </a>
           <a
             className="header__social header__social--ig"

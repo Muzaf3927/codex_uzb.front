@@ -250,6 +250,7 @@ export default {
     labels: {
       telegram: 'Telegram — 与我们联系',
       channel: '我们的 Telegram 频道',
+      whatsapp: 'WhatsApp — 联系我们',
       instagram: 'Instagram',
       phone: '电话',
       email: '邮箱',

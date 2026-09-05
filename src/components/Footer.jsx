@@ -16,19 +16,46 @@ export default function Footer() {
             <Logo size={42} />
             <p className="footer__about">{t.footer.about}</p>
             <div className="footer__socials">
-              <a href={contactLinks.telegram(contacts)} target="_blank" rel="noreferrer" aria-label="Telegram">
+              <a
+                className="footer__social footer__social--telegram"
+                href={contactLinks.telegram(contacts)}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Telegram"
+              >
                 <Icon name="telegram" size={19} />
               </a>
-              <a href={contactLinks.channel(contacts)} target="_blank" rel="noreferrer" aria-label="Telegram channel">
+              <a
+                className="footer__social footer__social--telegram"
+                href={contactLinks.channel(contacts)}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Telegram channel"
+              >
                 <Icon name="megaphone" size={19} />
               </a>
-              <a href={contactLinks.instagram(contacts)} target="_blank" rel="noreferrer" aria-label="Instagram">
+              <a
+                className="footer__social footer__social--whatsapp"
+                href={contactLinks.whatsapp(contacts)}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="WhatsApp"
+              >
+                <Icon name="whatsapp" size={19} />
+              </a>
+              <a
+                className="footer__social footer__social--instagram"
+                href={contactLinks.instagram(contacts)}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
+              >
                 <Icon name="instagram" size={19} />
               </a>
-              <a href={contactLinks.email(contacts)} aria-label="Email">
+              <a className="footer__social footer__social--mail" href={contactLinks.email(contacts)} aria-label="Email">
                 <Icon name="mail" size={19} />
               </a>
-              <a href={contactLinks.phone(contacts)} aria-label="Phone">
+              <a className="footer__social footer__social--phone" href={contactLinks.phone(contacts)} aria-label="Phone">
                 <Icon name="phone" size={19} />
               </a>
             </div>
@@ -58,6 +85,9 @@ export default function Footer() {
             </a>
             <a href={contactLinks.instagram(contacts)} target="_blank" rel="noreferrer">
               {t.footer.instagram}: @{contacts.instagram}
+            </a>
+            <a href={contactLinks.whatsapp(contacts)} target="_blank" rel="noreferrer">
+              WhatsApp: {contacts.phone}
             </a>
             <a href={contactLinks.phone(contacts)}>{contacts.phone}</a>
             <a href={contactLinks.email(contacts)}>{contacts.email}</a>

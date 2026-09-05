@@ -1,0 +1,120 @@
+const base = {
+  fill: 'none',
+  stroke: 'currentColor',
+  strokeWidth: 1.7,
+  strokeLinecap: 'round',
+  strokeLinejoin: 'round',
+}
+
+const paths = {
+  code: <path d="M8 6 2 12l6 6M16 6l6 6-6 6M14 4l-4 16" {...base} />,
+  mobile: (
+    <>
+      <rect x="6" y="2" width="12" height="20" rx="3" {...base} />
+      <path d="M11 18.5h2" {...base} />
+    </>
+  ),
+  gear: (
+    <>
+      <circle cx="12" cy="12" r="3.2" {...base} />
+      <path
+        d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1A1.6 1.6 0 0 0 9 19.4a1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1A1.6 1.6 0 0 0 4.6 9a1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1Z"
+        {...base}
+      />
+    </>
+  ),
+  monitor: (
+    <>
+      <rect x="2.5" y="4" width="19" height="12.5" rx="2.5" {...base} />
+      <path d="M9 20.5h6M12 16.5v4" {...base} />
+    </>
+  ),
+  ai: (
+    <>
+      <path d="M12 3.2 13.5 8l4.8 1.5-4.8 1.5L12 15.8 10.5 11 5.7 9.5 10.5 8 12 3.2Z" {...base} />
+      <path d="M18.5 15.2l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7.7-2Z" {...base} />
+      <path d="M6 16.5v3M4.5 18h3" {...base} />
+    </>
+  ),
+  cloud: (
+    <>
+      <path d="M7 19h10.5a4 4 0 0 0 .6-7.96A6 6 0 0 0 6.4 9.6 3.7 3.7 0 0 0 7 19Z" {...base} />
+      <path d="m10.6 12.6-1.6 1.7 1.6 1.7M13.4 12.6l1.6 1.7-1.6 1.7" {...base} />
+    </>
+  ),
+  design: (
+    <>
+      <path d="M12 2 3 7l9 5 9-5-9-5Z" {...base} />
+      <path d="m3 12 9 5 9-5M3 17l9 5 9-5" {...base} />
+    </>
+  ),
+  rocket: (
+    <>
+      <path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1 0-2.9a2 2 0 0 0-3 0Z" {...base} />
+      <path d="M12 15 9 12a15 15 0 0 1 3-8c1.6-1.6 4-2 6-2 0 2-.4 4.4-2 6a15 15 0 0 1-4 3Z" {...base} />
+      <path d="M9 12H5s.4-2.2 1.5-3.3S9 7 9 7M12 15v4s2.2-.4 3.3-1.5S17 15 17 15" {...base} />
+    </>
+  ),
+  shield: (
+    <>
+      <path d="M12 2 4 5.5v6c0 5 3.4 9.2 8 10.5 4.6-1.3 8-5.5 8-10.5v-6L12 2Z" {...base} />
+      <path d="m9 12 2 2 4-4" {...base} />
+    </>
+  ),
+  telegram: <path d="M21.5 4 2.5 11.3c-1 .4-1 1.2 0 1.5l4.8 1.5 1.8 5.5c.2.7.5.9 1.1.4l2.7-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3-14.2c.3-1.2-.4-1.8-1.3-1.5Zm-4 3.6-8 7.1-.3 3.5-1.6-4.9 9.9-5.7Z" fill="currentColor" stroke="none" />,
+  instagram: (
+    <>
+      <rect x="3" y="3" width="18" height="18" rx="5.2" {...base} />
+      <circle cx="12" cy="12" r="4" {...base} />
+      <circle cx="17.2" cy="6.8" r="1.15" fill="currentColor" stroke="none" />
+    </>
+  ),
+  megaphone: (
+    <>
+      <path d="M4 9v6h3l7 4V5L7 9H4Z" {...base} />
+      <path d="M17.5 9.2a4 4 0 0 1 0 5.6M20 6.8a7.5 7.5 0 0 1 0 10.4" {...base} />
+    </>
+  ),
+  mail: (
+    <>
+      <rect x="2.5" y="4.5" width="19" height="15" rx="3" {...base} />
+      <path d="m3.5 7 8.5 6 8.5-6" {...base} />
+    </>
+  ),
+  phone: (
+    <path
+      d="M6 3h3l2 5-2.5 1.5a12 12 0 0 0 6 6L16 13l5 2v3a2 2 0 0 1-2.2 2A17 17 0 0 1 4 5.2 2 2 0 0 1 6 3Z"
+      {...base}
+    />
+  ),
+  pin: (
+    <>
+      <path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11Z" {...base} />
+      <circle cx="12" cy="10" r="2.6" {...base} />
+    </>
+  ),
+  clock: (
+    <>
+      <circle cx="12" cy="12" r="9" {...base} />
+      <path d="M12 7v5.2l3.2 2" {...base} />
+    </>
+  ),
+  arrow: <path d="M5 12h14M13 6l6 6-6 6" {...base} />,
+  check: <path d="m4 12.5 5 5L20 6.5" {...base} />,
+  plus: <path d="M12 5v14M5 12h14" {...base} />,
+}
+
+export default function Icon({ name, size = 22, className = '' }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      className={className}
+      aria-hidden="true"
+      focusable="false"
+    >
+      {paths[name] || null}
+    </svg>
+  )
+}

@@ -1,22 +1,27 @@
-import { useI18n, languageList } from '../i18n/index.jsx'
+import { useI18n, languageList, langHref, STORAGE_KEY } from '../i18n/index.jsx'
 import './LangSwitcher.css'
 
-/** Переключатель языков: 4 кнопки в одной «пилюле». */
+/**
+ * Переключатель языков: обычные ссылки на /ru/, /en/, /zh/.
+ * Именно ссылки, а не кнопки — так поисковик находит все языковые версии.
+ */
 export default function LangSwitcher({ variant = 'header' }) {
-  const { lang, setLang, t } = useI18n()
+  const { lang, t } = useI18n()
 
   return (
     <div className={`lang lang--${variant}`} role="group" aria-label={t.header.lang}>
       {languageList.map((l) => (
-        <button
+        <a
           key={l.code}
           className={`lang__item ${l.code === lang ? 'is-active' : ''}`}
-          onClick={() => setLang(l.code)}
-          aria-pressed={l.code === lang}
+          href={langHref(l.code)}
+          hrefLang={l.htmlLang}
+          onClick={() => window.localStorage.setItem(STORAGE_KEY, l.code)}
+          aria-current={l.code === lang ? 'true' : undefined}
           title={l.label}
         >
           {l.short}
-        </button>
+        </a>
       ))}
     </div>
   )

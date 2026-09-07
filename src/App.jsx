@@ -10,9 +10,9 @@ import Contact from './components/Contact.jsx'
 import Footer from './components/Footer.jsx'
 import FloatingContact from './components/FloatingContact.jsx'
 import useReveal from './components/useReveal.js'
-import { I18nProvider, useI18n } from './i18n/index.jsx'
+import { I18nProvider, useI18n, DEFAULT_LANG } from './i18n/index.jsx'
 
-function Site() {
+export function Site() {
   const { lang } = useI18n()
   useReveal(lang)
 
@@ -35,9 +35,9 @@ function Site() {
   )
 }
 
-export default function App() {
+export default function App({ lang = DEFAULT_LANG }) {
   return (
-    <I18nProvider>
+    <I18nProvider lang={lang}>
       <Site />
     </I18nProvider>
   )

@@ -5,9 +5,9 @@ export default {
   htmlLang: 'uz',
 
   meta: {
-    title: 'CODEX-UZB — Sizning gʻoyangiz, bizning kodimiz | Saytlar, mobil ilovalar va dasturiy taʼminot',
+    title: 'Sayt yaratish va mobil ilova ishlab chiqish Toshkentda — CODEX-UZB',
     description:
-      'CODEX-UZB — loyihalaringiz uchun Oʻzbekistondagi dasturchilar jamoasi. Veb-saytlar, mobil ilovalar, dasturiy taʼminot va biznesni avtomatlashtirish: gʻoyadan ishga tushirish va qoʻllab-quvvatlashgacha.',
+      'Veb-sayt, internet-doʻkon, mobil ilova, CRM va Telegram-bot ishlab chiqamiz. CODEX-UZB dasturchilar jamoasi Toshkentda: loyihani 24 soatda bepul baholaymiz.',
   },
 
   brand: {

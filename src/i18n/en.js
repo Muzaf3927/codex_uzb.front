@@ -5,9 +5,9 @@ export default {
   htmlLang: 'en',
 
   meta: {
-    title: 'CODEX-UZB — Your idea, our code | Websites, mobile apps and custom software',
+    title: 'Web and Mobile App Development in Tashkent, Uzbekistan — CODEX-UZB',
     description:
-      'CODEX-UZB is a development team from Uzbekistan. Websites, mobile apps, custom software and business automation — from the first call to launch and support.',
+      'Custom websites, online stores, mobile apps, CRM systems and Telegram bots by CODEX-UZB, a software development team in Tashkent. Free estimate within 24 hours.',
   },
 
   brand: {

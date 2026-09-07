@@ -5,9 +5,9 @@ export default {
   htmlLang: 'zh-Hans',
 
   meta: {
-    title: 'CODEX-UZB — 您的创意，我们的代码 | 网站、移动应用与定制软件开发',
+    title: 'CODEX-UZB — 乌兹别克斯坦塔什干网站建设与移动应用开发',
     description:
-      'CODEX-UZB 是来自乌兹别克斯坦的开发团队。提供网站、移动应用、定制软件与企业自动化服务：从创意到上线与后续维护。',
+      '塔什干 CODEX-UZB 开发团队：网站建设、电商平台、移动应用、CRM 系统与 Telegram 机器人定制开发，24 小时内免费评估您的项目。',
   },
 
   brand: {

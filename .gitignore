@@ -7,3 +7,4 @@ dist
 # IDE
 .idea
 .vscode
+dist-ssr

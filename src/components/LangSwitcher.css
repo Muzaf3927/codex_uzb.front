@@ -9,6 +9,8 @@
 }
 
 .lang__item {
+  display: inline-block;
+  text-decoration: none;
   padding: 7px 13px;
   border: none;
   border-radius: 999px;

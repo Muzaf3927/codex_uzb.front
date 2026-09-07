@@ -84,3 +84,12 @@ Google ранжирует сайты, на которые ссылаются д�
 cd codex-web && node scripts/indexnow.mjs
 ```
 Google IndexNow не поддерживает — для него нужен Search Console (см. выше).
+
+## Проверка
+
+```bash
+cd codex-web && node scripts/seo-check.mjs
+```
+Скрипт дёргает живой сайт и проверяет: robots/sitemap, редиректы, для каждой из 4 страниц —
+код ответа, title, description, canonical, lang, hreflang, наличие текста в HTML без JS,
+язык контента, H1, микроразметку, Open Graph; теги подтверждения прав, ключ IndexNow, скорость.

@@ -74,3 +74,13 @@ Google ранжирует сайты, на которые ссылаются д�
 
 Инфраструктура для этого уже есть: `scripts/prerender.mjs` собирает статические страницы —
 достаточно добавить в него список страниц и тексты.
+
+## IndexNow (Bing + Яндекс)
+
+Ключ: `b653176e6279bbb93aad3ab4c11dd260`, файл-подтверждение: `public/b653176e6279bbb93aad3ab4c11dd260.txt` → https://www.codex-uzb.uz/b653176e6279bbb93aad3ab4c11dd260.txt
+
+Уведомить поисковики о новых/изменённых страницах:
+```bash
+cd codex-web && node scripts/indexnow.mjs
+```
+Google IndexNow не поддерживает — для него нужен Search Console (см. выше).

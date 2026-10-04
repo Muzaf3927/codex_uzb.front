@@ -120,3 +120,11 @@
 @media (prefers-reduced-motion: reduce) {
   .fab__pulse { animation: none; }
 }
+
+/* Открытое мобильное меню перекрывает страницу — кнопка связи поверх него
+   выглядела бы случайным элементом. Прячем, пока меню открыто. */
+body.menu-open .fab {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}

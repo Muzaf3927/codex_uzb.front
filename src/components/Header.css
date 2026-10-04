@@ -5,16 +5,34 @@
   height: var(--header-h);
   display: flex;
   align-items: center;
-  transition: background 0.3s ease, border-color 0.3s ease, backdrop-filter 0.3s ease;
+  transition: border-color 0.3s ease;
   border-bottom: 1px solid transparent;
 }
-.header--scrolled {
+
+/* Подложка хедера живёт в псевдоэлементе, а не на самом .header — и это не
+   украшательство. Элемент с backdrop-filter становится точкой отсчёта для
+   всех своих position:fixed потомков. Пока фильтр висел на .header, после
+   прокрутки страницы выпадающее меню (.header__nav — потомок хедера) начинало
+   считать `inset: var(--header-h) 0 0 0` не от окна, а от полоски хедера
+   высотой 76px: высота меню схлопывалась почти в ноль, фон исчезал, и меню
+   выглядело прозрачным. Наверху страницы класса --scrolled нет, фильтра нет —
+   поэтому там же меню открывалось нормально, во весь экран.
+   Псевдоэлемент меню не родитель, так что отсчёт остаётся от окна. */
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
   background: rgba(8, 9, 12, 0.78);
   backdrop-filter: blur(14px);
-  border-bottom-color: var(--border);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
 }
+.header--scrolled::before { opacity: 1; }
+.header--scrolled { border-bottom-color: var(--border); }
 
-.header__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+/* Над подложкой */
+.header__inner { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 
 .logo { display: inline-flex; align-items: center; gap: 12px; }
 .logo__text { display: flex; flex-direction: column; line-height: 1.1; }
@@ -78,10 +96,14 @@
     flex-direction: column;
     justify-content: center;
     gap: 26px;
-    background: rgba(8, 9, 12, 0.97);
-    backdrop-filter: blur(16px);
+    /* Непрозрачный фон: меню перекрывает страницу целиком, просвечивать
+       ему нечем и незачем — так текст читается на любой секции сайта */
+    background: var(--bg);
     transform: translateX(100%);
     transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: 32px 0;
   }
   .header__nav.is-open { transform: none; }
   .header__nav a { font-size: 21px; color: var(--text); }

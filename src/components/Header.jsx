@@ -17,10 +17,33 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  // Пока меню открыто, страница под ним не прокручивается, а плавающая кнопка
+  // связи прячется — она лежит выше меню по z-index и иначе висела бы поверх
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
-    return () => { document.body.style.overflow = '' }
+    document.body.classList.toggle('menu-open', open)
+    return () => {
+      document.body.style.overflow = ''
+      document.body.classList.remove('menu-open')
+    }
   }, [open])
+
+  // Escape закрывает меню
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e) => { if (e.key === 'Escape') setOpen(false) }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [open])
+
+  // Если экран стал широким (поворот телефона, разворот окна), бургер исчезает
+  // вместе с кнопкой закрытия — меню нужно закрыть самим, иначе прокрутка
+  // страницы останется заблокированной, а выключить её будет нечем
+  useEffect(() => {
+    const onResize = () => { if (window.innerWidth > 980) setOpen(false) }
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
 
   return (
     <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
